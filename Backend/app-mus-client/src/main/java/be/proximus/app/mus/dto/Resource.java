@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Resource {
 	
-	private List schemas;
+	private List<String> schemas;
 	private String udmId;
 	private String key;
 	private String productSpecCode;

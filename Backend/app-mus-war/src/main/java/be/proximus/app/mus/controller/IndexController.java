@@ -28,9 +28,8 @@ public class IndexController {
 	
 	@GetMapping(value = "/validateMobile")
 	public ResponseEntity<UdmResponse> validateMobile() {
-        UdmResponse quote = restTemplate.getForObject("http://jba-i1-int.web.bc:10007/jaxws-udm-bl-1.0/UDMRestService/scim/v2/AssignedProducts/?context=AP&type=MOBILE&value=0499102030", UdmResponse.class);
-        LOG.info(quote.toString());
-		return new ResponseEntity<UdmResponse>(quote, HttpStatus.OK);
+        UdmResponse udmResponse = restTemplate.getForObject("http://jba-i1-int.web.bc:10007/jaxws-udm-bl-1.0/UDMRestService/scim/v2/AssignedProducts/?context=AP&type=MOBILE&value=0499102030", UdmResponse.class);
+        LOG.info(udmResponse.toString());
+		return new ResponseEntity<UdmResponse>(udmResponse, HttpStatus.OK);
 	}
-
 }

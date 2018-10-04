@@ -1,13 +1,14 @@
-package be.proximus.app.mus.dto;
+package be.proximus.app.mus.dto.udm;
 
 import java.util.List;
 
-public class AssignedServices {
+public class AssignedServiceDto {
 
 	private String udmId;
 	private String serviceSpecCode;
-	private List<Characteristic> characteristics;
+	private List<CharacteristicDto> characteristics;
 	
+	public AssignedServiceDto(){}
 	
 	public String getUdmId() {
 		return udmId;
@@ -21,10 +22,10 @@ public class AssignedServices {
 	public void setServiceSpecCode(String serviceSpecCode) {
 		this.serviceSpecCode = serviceSpecCode;
 	}
-	public List<Characteristic> getCharacteristics() {
+	public List<CharacteristicDto> getCharacteristics() {
 		return characteristics;
 	}
-	public void setCharacteristics(List<Characteristic> characteristics) {
+	public void setCharacteristics(List<CharacteristicDto> characteristics) {
 		this.characteristics = characteristics;
 	}
 	

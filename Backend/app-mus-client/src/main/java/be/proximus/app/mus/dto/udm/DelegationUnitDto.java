@@ -1,14 +1,17 @@
-package be.proximus.app.mus.dto;
+package be.proximus.app.mus.dto.udm;
 
 import java.util.Date;
 
-public class DelegationUnit {
+public class DelegationUnitDto {
 	
 	private String udmId;
 	private String code;
 	private String contextCode;
 	private String status;
 	private Date creationTime;
+	
+	public DelegationUnitDto(){}
+	
 	public String getUdmId() {
 		return udmId;
 	}

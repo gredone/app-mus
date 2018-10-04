@@ -1,10 +1,11 @@
-package be.proximus.app.mus.dto;
+package be.proximus.app.mus.dto.udm;
 
-public class Characteristic {
+public class CharacteristicDto {
 	
 	private String name;
 	private String value;
 	
+	public CharacteristicDto(){}
 
 	public String getName() {
 		return name;

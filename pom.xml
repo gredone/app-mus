@@ -9,7 +9,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-
 	<modules>
 		<module>Backend</module>
 	</modules>
@@ -29,17 +28,16 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-log4j2</artifactId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 			<version>${version.spring.boot}</version>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+		<!-- https://mvnrepository.com/artifact/org.apache.derby/derby -->
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-core</artifactId>
-			<version>2.9.5</version>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+			<version>${version.apache.derby}</version>
+			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 
 
@@ -53,6 +51,7 @@
 		<version.spring.security.oauth2>2.0.8.RELEASE</version.spring.security.oauth2>
 		<version.spring.security>3.2.9.RELEASE</version.spring.security>
 		<version.spring.security.test>4.0.3.RELEASE</version.spring.security.test>
+		<version.apache.derby>10.11.1.1</version.apache.derby>
 		<version.cassandra.driver>3.1.4</version.cassandra.driver>
 		<version.javax.servlet>3.1.0</version.javax.servlet>
 		<version.jackson-core>2.8.11</version.jackson-core>
@@ -118,7 +117,11 @@
 
 
 
-
+	<build>
+		<defaultGoal>clean package</defaultGoal>
+		<directory>${basedir}/target</directory>
+		<finalName>${artifactId}-${version}</finalName>
+	</build>
 
 
 </project>

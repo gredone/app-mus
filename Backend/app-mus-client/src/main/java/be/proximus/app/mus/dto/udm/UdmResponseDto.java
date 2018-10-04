@@ -1,37 +1,49 @@
-package be.proximus.app.mus.dto;
+package be.proximus.app.mus.dto.udm;
 
 import java.util.List;
 
-public class UdmResponse {
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
+public class UdmResponseDto {
 	
 	private List<String> schemas;
-	private String totalResutls;
-	private List<Resource> resources;
+	private String totalResults;
+	private List<ResourceDto> resources;
+	private String test;
 	
+	public UdmResponseDto() {
+	}
 	
-	public List getSchemas() {
-		return schemas;
+	public String getTest() {
+		return test;
 	}
-	public void setSchemas(List schemas) {
-		this.schemas = schemas;
+	public void setTest(String test) {
+		this.test = test;
 	}
-	public String getTotalResutls() {
-		return totalResutls;
+	public String getTotalResults() {
+		return totalResults;
 	}
-	public void setTotalResutls(String totalResutls) {
-		this.totalResutls = totalResutls;
+	public void setTotalResults(String totalResults) {
+		this.totalResults = totalResults;
 	}
-	public List<Resource> getResources() {
+	public List<ResourceDto> getResources() {
 		return resources;
 	}
-	public void setResources(List<Resource> resources) {
+	public void setResources(List<ResourceDto> resources) {
 		this.resources = resources;
+	}
+	
+	public List<String> getSchemas() {
+		return schemas;
+	}
+	public void setSchemas(List<String> schemas) {
+		this.schemas = schemas;
 	}
 	@Override
 	public String toString() {
-		return "UdmResponse [schemas=" + schemas + ", totalResutls=" + totalResutls + ", resources=" + resources + "]";
+		return "UdmResponse [schemas=" + schemas + ", totalResutls=" + totalResults + ", resources=" + resources + "]";
 	}
 
-	
-	
 }

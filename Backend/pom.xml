@@ -8,8 +8,11 @@
   
   <artifactId>Backend</artifactId>
   <packaging>pom</packaging>
+  
+  
   <modules>
   	<module>app-mus-client</module>
   	<module>app-mus-war</module>
   </modules>
+  
 </project>

@@ -1,14 +1,14 @@
-package be.proximus.app.mus.dto;
+package be.proximus.app.mus.dto.udm;
 
 import java.util.Date;
 
-public class Meta {
+public class MetaDto {
 	
 	private Date created;
 	private String location;
 	private String resourceType;
 	
-	
+	public MetaDto(){}
 	
 	public Date getCreated() {
 		return created;
